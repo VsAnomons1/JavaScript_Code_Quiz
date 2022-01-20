@@ -8,15 +8,12 @@ var users = localStorage.getItem("users");
 var everyUserScores = localStorage.getItem("everyUserScores");
 document.body.append(anotherBox);
 
-// Creates question box 
-
-
 var list = [];
 var totalscore = 0;
 var totalTime = 60;
 var storeTime = localStorage.setItem("storeTime", totalTime)
 var storeList = localStorage.setItem("storeList", list.length);
-
+// Sets the timer of the quiz
 function setTime(){
   var timer = setInterval(function(){
     
@@ -31,7 +28,7 @@ function setTime(){
            
         }, 1000);
     }
-
+// Generates the question box with given choices
 var generateQuestionBox = function(){
     
     var box = document.createElement("main")
@@ -43,15 +40,14 @@ var generateQuestionBox = function(){
     anotherBox.append(time);
     var indexValue = Math.floor(Math.random() * (Math.floor(5) - Math.ceil(0)) + 0)
     var choices = Math.floor(Math.random() * (Math.floor(3) - Math.ceil(0)) + 0)
-    
+    // Checks if list is empty or  checks if list does not include any of the previous indexValue to avoid any value repetition
    if(list.length == 0 || !list.includes(indexValue)){
     list.push(indexValue);
     storeList = localStorage.setItem("storeList", list.length);
 
     main.setAttribute("style", "display: none;")
-// box.setAttribute("style")
     document.body.append(box);
-   
+   // Contains question bank
     var questions = [
         "What is the correct syntax for an array ?",
         "What does the split method do to a string ?",
@@ -60,7 +56,7 @@ var generateQuestionBox = function(){
         "What does the while statement do ?"
     ]
 
-    
+    // Contains answer bank
     var answers = [
         "var array = [\"bob\", \"john\", \"abby\"]",
         "It separates the string by the given separator converting it into an array.",
@@ -68,13 +64,14 @@ var generateQuestionBox = function(){
         "The == checks only for the values to be the same and === checks the datatype and value to be the same.",
         "Continues to iterate through a block of code as long as the given condition is true."
     ]
+    // Sets the p element to the question depending what the indexValue is
     p.textContent = questions[indexValue];
-
+    // Sets the styling to the choices of the question
     ul.setAttribute("style","list-style-type: none; margin: 0; padding: 1em;")
     liOne.setAttribute("style", "background-color: red; padding: .5em; margin: 0.2em;")
     liTwo.setAttribute("style", "background-color: red; padding: .5em; margin: 0.2em;")
     liThree.setAttribute("style", "background-color: red; padding: .5em; margin: 0.2em;")
-    
+    // Renders the proper choices to its given question depending on what the indexValue is
     switch(indexValue){
         case 0:
             if(choices == 0){
@@ -170,7 +167,8 @@ var generateQuestionBox = function(){
     ul.append(liTwo);
     ul.append(liThree);
     
-
+    // if clicked on the correct answer choice to the question it increments one to the user's score and if incorrect deduct time to the timer
+    // do nothing to the user score
     liOne.addEventListener("click", function(){
         if(choices == 0){
             storeScore++;
@@ -231,8 +229,7 @@ var generateQuestionBox = function(){
 var startOver = function(){
     document.location.replace("main.html");
 }
-// Contains questions
-
+// Begins quiz
 startButton.addEventListener("click", function(){
     setTime();
     generateQuestionBox();
