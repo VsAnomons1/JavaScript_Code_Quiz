@@ -1,10 +1,10 @@
 # Javascript_Code_Quiz
 ## Description:
-> This project consist of a small code quiz about the basic fundenmentals on Javascript. Technologies that were used were  HTML5 for the layout of the quiz, CSS3 for the styling, and finally Javascript for the functionalities to the quiz.
+This project consist of a small code quiz about the basic fundenmentals on Javascript. Technologies that were used were  HTML5 for the layout of the quiz, CSS3 for the styling, and finally Javascript for the functionalities to the quiz.
 ## Demo:
-    [![Demo to app](Javascript-Code-Quiz.gif)]
+![Demo to app](Javascript-Code-Quiz.gif "Javascript Code Quiz")
 ## Links:
-    <a href= "https://vsanomons1.github.io/Javascript_Code_Quiz/">Javascript Code Quiz</a>
+[Javascript Code Quiz](https://vsanomons1.github.io/Javascript_Code_Quiz/)
 ## License:
 MIT License
 
