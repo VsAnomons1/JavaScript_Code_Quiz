@@ -18,7 +18,7 @@ function atLoad(){
         usersScores = storeUsersScores;
     }
     // Sets the user's final score of the quiz
-    if(storeTime === 0){
+    if(storeTime <= 0){
           
         userScore.textContent = storeScore * 100;
 

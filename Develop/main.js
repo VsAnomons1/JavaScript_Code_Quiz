@@ -19,7 +19,7 @@ function setTime(){
     
     time.textContent = "Time: " + totalTime;
             
-            if(totalTime === 0){
+            if(totalTime <= 0){
                 clearInterval(timer);
                 startOver();
             }
@@ -58,7 +58,7 @@ var generateQuestionBox = function(){
 
     // Contains answer bank
     var answers = [
-        "var array = [\"bob\", \"john\", \"abby\"]",
+        "var array = [\"bob\", \"john\", \"abby\"];",
         "It separates the string by the given separator converting it into an array.",
         "<script src=\"index.js\"></script>",
         "The == checks only for the values to be the same and === checks the datatype and value to be the same.",
@@ -68,9 +68,9 @@ var generateQuestionBox = function(){
     p.textContent = questions[indexValue];
     // Sets the styling to the choices of the question
     ul.setAttribute("style","list-style-type: none; margin: 0; padding: 1em;")
-    liOne.setAttribute("style", "background-color: red; padding: .5em; margin: 0.2em;")
-    liTwo.setAttribute("style", "background-color: red; padding: .5em; margin: 0.2em;")
-    liThree.setAttribute("style", "background-color: red; padding: .5em; margin: 0.2em;")
+    liOne.setAttribute("style", "background-color: lightsalmon; padding: .5em; margin: 0.2em;")
+    liTwo.setAttribute("style", "background-color: lightsalmon; padding: .5em; margin: 0.2em;")
+    liThree.setAttribute("style", "background-color: lightsalmon; padding: .5em; margin: 0.2em;")
     // Renders the proper choices to its given question depending on what the indexValue is
     switch(indexValue){
         case 0:
