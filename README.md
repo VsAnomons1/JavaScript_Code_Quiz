@@ -8,7 +8,7 @@ This project consist of a small code quiz about the basic fundenmentals on Javas
 ## License:
 MIT License
 
-Copyright (c) [2022] [Eric Mellin Alvarado]
+Copyright (c) [2023] [Eric Mellin Alvarado]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
