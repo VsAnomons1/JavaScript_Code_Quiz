@@ -1,0 +1,11 @@
+.content {
+    justify-content: start;
+}
+.btn {
+    margin-right: 1em;
+    align-self: flex-end;
+}
+
+ul {
+    flex-direction: column;
+}

@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header {
+    height: 12em;
+    border-bottom: 0.5em dashed black;
+    background-color: lightblue;
+}
+header h2 {
+    margin-top: 1em;
+}
+main {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+}
+.content {
+        display: flex;
+        font-size: 1.3em;
+        height: 80%;
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 5em;
+        border: 0.5em solid black;
+        border-radius: 1em;
+        background-color: rgb(206, 232, 154);
+    
+}
+
+.content ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 3.5em;
+}
+
+.btn {
+    font-size: 1em;
+    border: 0.2em solid black;
+    border-radius: 0.1em;
+    width: 7em;
+    height: 3em;
+}
+
+@media screen and (max-width: 500px) {
+    header h2 {
+        margin-top: 5em;
+        font-size: 1.3em;
+    }
+    .content {
+        font-size: 1em;
+        row-gap: 1em;;
+    }
+    .btn {
+        font-size: 0.7em;
+    }
+}

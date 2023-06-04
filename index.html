@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Javascript Code Quiz</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Develop/main.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Code Quiz</title>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 <body>
+    <header>
+        <h2>JavaScript Code Quiz</h2>
+    </header>
     <main>
-        <header> 
-            <h1> Javascript Code Quiz</h1>
-        </header>
-        <section>
-            <p>Welcome to the Javascript Code Quiz! In this quiz you must answer
-               5 questions and have 1-minuite to do so, but be careful as answering
-               a question incorrectly can deduct time off. Click the start button to begin!
-            </p>
-            <button id="start">Start</button>
-        </section>
-    </main> 
+        <div class="content">
+        <p id="about">
+            Welcome to the Javascript Code Quiz! You got 60 seconds
+            to answer</br> the five questions. Get it wrong and you will
+            get time deducted. Once</br> you answered all five or time
+            runs out you'll get a score on how well</br> you did on the
+            quiz and have it shown on the scoreboard.  
+        </p>
+        <ul id="btns">
+            <li>
+                <button id="start-btn" class="btn">Start</button>
+            </li>
+            <li>
+                <button id="highscore-btn" class="btn"><a href="highscores.html">Highscores</a></button>
+            </li>
+        </ul>
+        <p id="timer"></p>
+        </div>
+    </main>
+    <script src="scripts/script.js"></script>
 </body>
-<script src='Develop/main.js'></script>
-</html>
