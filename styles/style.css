@@ -49,6 +49,22 @@ main {
     height: 3em;
 }
 
+.btn:hover {
+    background-color: rgb(187, 235, 253);
+}
+
+#choices li {
+    background-color: lightcyan;
+    padding: 0.5em;
+}
+
+#choices li:hover {
+    border: 0.1em solid black;
+    border-left: 0em;
+    border-right: 0em;
+    background-color: rgba(224, 255, 255, 0.794);
+}
+
 @media screen and (max-width: 500px) {
     header h2 {
         margin-top: 5em;
